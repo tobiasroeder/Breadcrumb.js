@@ -38,5 +38,5 @@ breadcrumb({
 
 ---
 
-Example here: [https://tobiasroeder.github.io/breadcumbjs](https://tobiasroeder.github.io/breadcrumb)  
+Example here: [https://tobiasroeder.github.io/breadcumbjs](https://tobiasroeder.github.io/breadcrumbjs)  
 [Try it yourself](https://codepen.io/tobiasroeder/pen/agBgYO)
