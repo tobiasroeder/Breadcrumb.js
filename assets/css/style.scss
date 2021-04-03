@@ -1,0 +1,23 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header {
+	background-color: #39c;
+	background-image: linear-gradient(120deg, #069, #39c)
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  color: #39c;
+}
+
+table {
+  overflow: auto;
+  display: block;
+}
