@@ -19,12 +19,12 @@ Breadcrumb.js latest version [1.1.0](https://github.com/tobiasroeder/Breadcrumb.
 ```
 ```javascript
 // only the 'elmt' parameter is necessary to work
-function breadcrumb({
+breadcrumb({
   elmt: '.breadcrumb-path',
 });
 
 // full
-function breadcrumb({
+breadcrumb({
   elmt: '.breadcrumb-path',
   home: '&#x1F3E0;', // 🏠
   capitalFirstLetter: true,
