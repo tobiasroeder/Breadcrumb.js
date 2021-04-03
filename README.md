@@ -1,42 +1,52 @@
-# Breadcrumb.js Documentation
+## Documentation
+
+Breadcrumb.js latest version [1.1.0](https://github.com/tobiasroeder/Breadcrumb.js/releases/tag/1.1.0)
+
+***
 
 ### Include this file
-``` html
-<script src="https://cdn.jsdelivr.net/gh/tobiasroeder/breadcrumb.js@1.0.0/js/breadcrumb.min.js"></script>
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/tobiasroeder/breadcrumb.js@1.1.0/js/breadcrumb.min.js"></script>
 ```
 
----
+***
 
-### Syntax ([Example](https://codepen.io/tobiasroeder/pen/agBgYO))
+### Syntax
 
-``` html
-<div class="breadcrumb-path" data-breadcrumb></div>
+```html
+<div class="breadcrumb-path"></div>
 ```
+```javascript
+// only the 'elmt' parameter is necessary to work
+function breadcrumb({
+  elmt: '.breadcrumb-path',
+});
 
-``` javascript
-breadcrumb({
-	element: '.breadcrumb-path',
-	home: '&#x1F3E0;',
-	firstLetter: true,
-	hyphen: true,
-	hyphenElement: ' - ',
-	info: false
+// full
+function breadcrumb({
+  elmt: '.breadcrumb-path',
+  home: '&#x1F3E0;', // 🏠
+  capitalFirstLetter: true,
+  hyphen: ' &gt; ', // >
+  lastItem: 'title',
+  info: true
 });
 ```
 
----
+***
 
 ### Parameter
- Parameter | Type | Default | Description
---|--|--|--
- element | string |  | Set the element where the breadcrumb has to be written.
- home | string | 'Home' | Replace the default 'Home' value.
- firstLetter | boolean | false | If 'true' the first letter is in uppercase.
- hyphen | boolean | false | If 'true' between the links is a slash.
- hyphenElement | string |  | If hyphen is 'true' and this one is not empty, this will be shown between the links.
- info | boolean | true | If 'false' there's no information about this file in the console.
 
----
+Parameter | Type | Default | Description
+--- | --- | --- | ---
+elmt | string | | Set the element/s where the breadcrumb has to be written.
+home | string | 'Home' | Replace the default value
+capitalFirstLetter | boolean | false | If `true` the first letter become uppercase.
+hyphen | string | ' / ' | Replace the default value
+lastItem | boolean/string | false | Replace last item e.g. the `h1` or the `title` ([#1](https://github.com/tobiasroeder/Breadcrumb.js/issues/1))
+info | boolean | false | Displays an information in the console
 
-Example here: [https://tobiasroeder.github.io/breadcumbjs](https://tobiasroeder.github.io/breadcrumbjs)  
+***
+
 [Try it yourself](https://codepen.io/tobiasroeder/pen/agBgYO)
