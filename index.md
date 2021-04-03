@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+## Documentation
 
-You can use the [editor on GitHub](https://github.com/tobiasroeder/Breadcrumb.js/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Breadcrumb.js latest version [1.1.0](https://github.com/tobiasroeder/Breadcrumb.js/releases/tag/1.1.0)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+***
 
-### Markdown
+### Include this file
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<script src="https://cdn.jsdelivr.net/gh/tobiasroeder/breadcrumb.js@1.1.0/js/breadcrumb.min.js"></script>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+***
 
-### Jekyll Themes
+### Syntax
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tobiasroeder/Breadcrumb.js/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```html
+<div class="breadcrumb-path"></div>
+```
+```javascript
+// only the 'elmt' parameter is necessary to work
+function breadcrumb({
+  elmt: '.breadcrumb-path',
+});
 
-### Support or Contact
+// full
+function breadcrumb({
+  elmt: '.breadcrumb-path',
+  home: '&#x1F3E0;', // 🏠
+  capitalFirstLetter: true,
+  hyphen: ' &gt; ', // >
+  lastItem: 'title',
+  info: true
+});
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+***
+
+### Parameter
+
+Parameter | Type | Default | Description
+--- | --- | --- | ---
+elmt | string | | Set the element/s where the breadcrumb has to be written.
+home | string | 'Home' | Replace the default value
+capitalFirstLetter | boolean | false | If `true` the first letter become uppercase.
+hyphen | string | ' / ' | Replace the default value
+lastItem | boolean/string | false | Replace last item e.g. the `h1` or the `title` ([#1](https://github.com/tobiasroeder/Breadcrumb.js/issues/1))
+info | boolean | false | Displays an information in the console
+
+***
+
+[Try it yourself](https://codepen.io/tobiasroeder/pen/agBgYO)
